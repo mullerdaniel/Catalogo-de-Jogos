@@ -3,6 +3,7 @@ package com.example.CatalogoJogos.mapper;
 import com.example.CatalogoJogos.dto.JogoRequisicaoDto;
 import com.example.CatalogoJogos.dto.JogoRespostaDto;
 import com.example.CatalogoJogos.model.Jogo;
+import jakarta.validation.Valid;
 
 public class JogoMapper {
 
@@ -18,14 +19,4 @@ public class JogoMapper {
         return jogo;
     }
 
-    public static JogoRespostaDto toRespostaDto(Jogo jogo){
-        return new JogoRespostaDto(
-                jogo.getId(),
-                jogo.getNome(),
-                jogo.getGenero(),
-                jogo.getDesenvolvedora(),
-                jogo.getPreco(),
-                jogo.getDataLancamento()
-        );
-    }
 }

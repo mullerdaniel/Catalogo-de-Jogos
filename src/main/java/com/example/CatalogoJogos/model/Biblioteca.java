@@ -1,7 +1,6 @@
 package com.example.CatalogoJogos.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -18,6 +17,8 @@ import java.util.Date;
 @Table(name = "biblioteca")
 public class Biblioteca {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private int jogador_id;
     private int jogo_id;

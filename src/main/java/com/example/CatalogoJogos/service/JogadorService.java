@@ -17,7 +17,7 @@ public class JogadorService {
 
     // CRIAR AVALIACAO
     public Jogador criarJogador(@Valid JogadorRequisicaoDto jogador) {
-        return jogadorRepository.save(jogador);
+        return null;
     }
 
     // LISTAR AVALIACOES

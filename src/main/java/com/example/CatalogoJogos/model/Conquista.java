@@ -1,7 +1,6 @@
 package com.example.CatalogoJogos.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -15,6 +14,8 @@ import lombok.Setter;
 @Table(name = "conquista")
 public class Conquista {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private int jogo_id;
     private String titulo;

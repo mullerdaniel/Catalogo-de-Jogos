@@ -1,6 +1,7 @@
 package com.example.CatalogoJogos.service;
 
 import com.example.CatalogoJogos.dto.JogoRequisicaoDto;
+import com.example.CatalogoJogos.mapper.JogoMapper;
 import com.example.CatalogoJogos.model.Jogo;
 import com.example.CatalogoJogos.repository.JogoRepository;
 import jakarta.validation.Valid;
@@ -17,7 +18,7 @@ public class JogoService {
 
     // CRIAR AVALIACAO
     public Jogo criarJogo(@Valid JogoRequisicaoDto jogo) {
-        return jogoRepository.save(jogo);
+        return null;
     }
 
     // LISTAR AVALIACOES

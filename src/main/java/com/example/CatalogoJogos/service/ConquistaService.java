@@ -17,7 +17,7 @@ public class ConquistaService {
 
     // CRIAR AVALIACAO
     public Conquista criarConquista(@Valid ConquistaRequisicaoDto conquista) {
-        return conquistaRepository.save(conquista);
+        return null;
     }
 
     // LISTAR AVALIACOES

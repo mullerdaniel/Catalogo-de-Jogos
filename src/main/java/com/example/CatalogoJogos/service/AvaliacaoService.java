@@ -17,7 +17,7 @@ public class AvaliacaoService {
 
     // CRIAR AVALIACAO
     public Avaliacao criarAvaliacao(@Valid AvaliacaoRequisicaoDto avaliacao) {
-        return avaliacaoRepository.save(avaliacao);
+        return null;
     }
 
     // LISTAR AVALIACOES

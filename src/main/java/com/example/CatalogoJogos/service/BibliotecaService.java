@@ -17,7 +17,7 @@ public class BibliotecaService {
 
     // CRIAR BIBLIOTECA
     public Biblioteca criarBiblioteca(@Valid BibliotecaRequisicaoDto biblioteca) {
-        return bibliotecaRepository.save(biblioteca);
+        return null;
     }
 
     // LISTAR BIBLIOTECA
