@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
+import java.util.Date;
 
 @Entity
 @AllArgsConstructor
@@ -18,8 +19,8 @@ import java.time.LocalDateTime;
 public class Biblioteca {
 
     private int id;
-    private int jogadorId;
-    private int jogoId;
+    private int jogador_id;
+    private int jogo_id;
     private int horasJogadas;
-    private LocalDateTime DataCompra;
+    private Date DataCompra;
 }
