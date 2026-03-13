@@ -1,8 +1,9 @@
 package com.example.CatalogoJogos.service;
 
-import com.example.CatalogoJogos.model.Avaliacao;
+import com.example.CatalogoJogos.dto.BibliotecaRequisicaoDto;
 import com.example.CatalogoJogos.model.Biblioteca;
 import com.example.CatalogoJogos.repository.BibliotecaRepository;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -15,7 +16,7 @@ public class BibliotecaService {
     private final BibliotecaRepository bibliotecaRepository;
 
     // CRIAR BIBLIOTECA
-    public Biblioteca criarBiblioteca(Biblioteca biblioteca) {
+    public Biblioteca criarBiblioteca(@Valid BibliotecaRequisicaoDto biblioteca) {
         return bibliotecaRepository.save(biblioteca);
     }
 

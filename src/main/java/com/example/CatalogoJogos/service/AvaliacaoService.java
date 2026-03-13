@@ -1,7 +1,9 @@
 package com.example.CatalogoJogos.service;
 
+import com.example.CatalogoJogos.dto.AvaliacaoRequisicaoDto;
 import com.example.CatalogoJogos.model.Avaliacao;
 import com.example.CatalogoJogos.repository.AvaliacaoRepository;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -14,7 +16,7 @@ public class AvaliacaoService {
     private final AvaliacaoRepository avaliacaoRepository;
 
     // CRIAR AVALIACAO
-    public Avaliacao criarAvaliacao(Avaliacao avaliacao) {
+    public Avaliacao criarAvaliacao(@Valid AvaliacaoRequisicaoDto avaliacao) {
         return avaliacaoRepository.save(avaliacao);
     }
 

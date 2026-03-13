@@ -1,8 +1,9 @@
 package com.example.CatalogoJogos.service;
 
-import com.example.CatalogoJogos.model.Avaliacao;
+import com.example.CatalogoJogos.dto.ConquistaRequisicaoDto;
 import com.example.CatalogoJogos.model.Conquista;
 import com.example.CatalogoJogos.repository.ConquistaRepository;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -15,7 +16,7 @@ public class ConquistaService {
     private final ConquistaRepository conquistaRepository;
 
     // CRIAR AVALIACAO
-    public Conquista criarConquista(Conquista conquista) {
+    public Conquista criarConquista(@Valid ConquistaRequisicaoDto conquista) {
         return conquistaRepository.save(conquista);
     }
 

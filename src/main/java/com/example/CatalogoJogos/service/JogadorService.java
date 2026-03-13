@@ -1,8 +1,9 @@
 package com.example.CatalogoJogos.service;
 
-import com.example.CatalogoJogos.model.Avaliacao;
+import com.example.CatalogoJogos.dto.JogadorRequisicaoDto;
 import com.example.CatalogoJogos.model.Jogador;
 import com.example.CatalogoJogos.repository.JogadorRepository;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -15,7 +16,7 @@ public class JogadorService {
     private final JogadorRepository jogadorRepository;
 
     // CRIAR AVALIACAO
-    public Jogador criarJogador(Jogador jogador) {
+    public Jogador criarJogador(@Valid JogadorRequisicaoDto jogador) {
         return jogadorRepository.save(jogador);
     }
 
