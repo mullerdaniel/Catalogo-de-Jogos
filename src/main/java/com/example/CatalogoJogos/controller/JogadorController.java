@@ -29,7 +29,7 @@ public class JogadorController {
     }
 
     @DeleteMapping("/{id}")
-    public void deletar(@PathVariable int id){
-        jogadorService.deletarJogador((long) id);
+    public void deletar(@PathVariable long id){
+        jogadorService.deletarJogador(id);
     }
 }

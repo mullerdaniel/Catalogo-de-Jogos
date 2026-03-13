@@ -18,7 +18,7 @@ public class Avaliacao {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private long id;
     private int jogador_id;
     private int jogo_id;
     private int nota;

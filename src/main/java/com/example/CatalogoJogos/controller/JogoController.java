@@ -29,7 +29,7 @@ public class JogoController {
     }
 
     @DeleteMapping("/{id}")
-    public void deletar(@PathVariable int id){
-        jogoService.deletarJogo((long) id);
+    public void deletar(@PathVariable long id){
+        jogoService.deletarJogo(id);
     }
 }

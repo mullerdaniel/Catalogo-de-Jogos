@@ -20,7 +20,7 @@ public class ConquistaController {
 
     @PostMapping
     public Conquista criar(@RequestBody @Valid ConquistaRequisicaoDto dto){
-        return conquistaService.criarConquista(dto);
+        return conquistaService.criarConsquista(dto);
     }
 
     @GetMapping

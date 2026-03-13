@@ -16,7 +16,7 @@ public class Conquista {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private long id;
     private int jogo_id;
     private String titulo;
     private String descricao;

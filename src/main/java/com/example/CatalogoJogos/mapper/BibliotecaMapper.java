@@ -19,7 +19,7 @@ public class BibliotecaMapper {
 
     public static BibliotecaRespostaDto toRespostaDto(Biblioteca biblioteca){
         return new BibliotecaRespostaDto(
-                biblioteca.getId(),
+                (int) biblioteca.getId(),
                 biblioteca.getJogador_id(),
                 biblioteca.getJogo_id(),
                 biblioteca.getHorasJogadas(),

@@ -20,7 +20,7 @@ public class AvaliacaoMapper {
 
     public static AvaliacaoRespostaDto toRespostaDto(Avaliacao avaliacao){
         return new AvaliacaoRespostaDto(
-                avaliacao.getId(),
+                (int) avaliacao.getId(),
                 avaliacao.getJogador_id(),
                 avaliacao.getJogo_id(),
                 avaliacao.getNota(),

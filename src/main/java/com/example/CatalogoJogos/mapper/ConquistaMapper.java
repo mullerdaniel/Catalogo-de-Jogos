@@ -19,7 +19,7 @@ public class ConquistaMapper {
 
     public static ConquistaRespostaDto toRespostaDto(Conquista conquista){
         return new ConquistaRespostaDto(
-                conquista.getId(),
+                (int) conquista.getId(),
                 conquista.getJogo_id(),
                 conquista.getTitulo(),
                 conquista.getDescricao(),

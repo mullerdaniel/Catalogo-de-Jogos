@@ -1,7 +1,10 @@
 package com.example.CatalogoJogos.service;
 
+import com.example.CatalogoJogos.dto.JogadorRequisicaoDto;
 import com.example.CatalogoJogos.dto.JogoRequisicaoDto;
+import com.example.CatalogoJogos.mapper.JogadorMapper;
 import com.example.CatalogoJogos.mapper.JogoMapper;
+import com.example.CatalogoJogos.model.Jogador;
 import com.example.CatalogoJogos.model.Jogo;
 import com.example.CatalogoJogos.repository.JogoRepository;
 import jakarta.validation.Valid;
@@ -14,25 +17,26 @@ import java.util.List;
 @RequiredArgsConstructor
 public class JogoService {
 
-    private final JogoRepository jogoRepository;
+    private final JogoRepository repository;
 
     // CRIAR AVALIACAO
-    public Jogo criarJogo(@Valid JogoRequisicaoDto jogo) {
-        return null;
+    public Jogo criarJogo(JogoRequisicaoDto dto){
+        Jogo jogo = JogoMapper.toModel(dto);
+        return repository.save(jogo);
     }
 
     // LISTAR AVALIACOES
     public List<Jogo> listarJogos() {
-        return jogoRepository.findAll();
+        return repository.findAll();
     }
 
     // BUSCAR AVALIACAO POR ID
     public Jogo buscarPorJogoPorId(Long id) {
-        return jogoRepository.findById(id).orElse(null);
+        return repository.findById(id).orElse(null);
     }
 
     // DELETAR AVALIACAO POR ID
     public void deletarJogo(Long id) {
-        jogoRepository.deleteById(id);
+        repository.deleteById(id);
     }
 }

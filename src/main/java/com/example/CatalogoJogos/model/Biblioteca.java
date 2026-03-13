@@ -19,7 +19,7 @@ public class Biblioteca {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private long id;
     private int jogador_id;
     private int jogo_id;
     private int horasJogadas;

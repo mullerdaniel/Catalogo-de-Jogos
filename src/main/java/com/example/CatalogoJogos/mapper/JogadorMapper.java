@@ -20,7 +20,7 @@ public class JogadorMapper {
 
     public static JogadorRespostaDto toRespostaDto(Jogador jogador){
         return new JogadorRespostaDto(
-                jogador.getId(),
+                (int) jogador.getId(),
                 jogador.getNome(),
                 jogador.getEmail(),
                 jogador.getNickname(),

@@ -1,9 +1,9 @@
 package com.example.CatalogoJogos.service;
 
 import com.example.CatalogoJogos.dto.JogadorRequisicaoDto;
+import com.example.CatalogoJogos.mapper.JogadorMapper;
 import com.example.CatalogoJogos.model.Jogador;
 import com.example.CatalogoJogos.repository.JogadorRepository;
-import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -13,25 +13,26 @@ import java.util.List;
 @RequiredArgsConstructor
 public class JogadorService {
 
-    private final JogadorRepository jogadorRepository;
+    private final JogadorRepository repository;
 
     // CRIAR AVALIACAO
-    public Jogador criarJogador(@Valid JogadorRequisicaoDto jogador) {
-        return null;
+    public Jogador criarJogador(JogadorRequisicaoDto dto){
+        Jogador jogador = JogadorMapper.toModel(dto);
+        return repository.save(jogador);
     }
 
     // LISTAR AVALIACOES
     public List<Jogador> listarJogadores() {
-        return jogadorRepository.findAll();
+        return repository.findAll();
     }
 
     // BUSCAR AVALIACAO POR ID
     public Jogador buscarPorJogadorPorId(Long id) {
-        return jogadorRepository.findById(id).orElse(null);
+        return repository.findById(id).orElse(null);
     }
 
     // DELETAR AVALIACAO POR ID
     public void deletarJogador(Long id) {
-        jogadorRepository.deleteById(id);
+        repository.deleteById(id);
     }
 }
